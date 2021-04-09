@@ -48,14 +48,14 @@ namespace DaniEventProgram
         {
             List<int> primes = new List<int>();
             int number = v;
-            for(int div = 2; div <= Math.Sqrt(v); div++)//since the square root of the number is always bigger than any prime factor of it, we can stop counting there
+            for(int div = 2; div <= v / 2; div++)//since the square root of the number is always bigger than number / 2
             {
                 //if the remainder of the division of the number and our divider is 0, it's divisible by it.
                 //and so, since the div number starts at 0 and goes up, we can ensure that it is prime
                 while (number % div == 0)
                 {
                     primes.Add(div);
-                    number = number / div;//this is here since we want to know how many times a prime number divides the input number
+                    number /= div;//this is here since we want to know how many times a prime number divides the input number
                 }
             }
             if (primes.Count == 0)//if the primes found are 0, our input is a prime itself. i could speed this up a bit by searching before.
