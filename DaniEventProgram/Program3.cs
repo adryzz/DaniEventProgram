@@ -35,7 +35,7 @@ namespace DaniEventProgram
             if (number == 2) return true;
             if (number % 2 == 0) return false;
 
-            var boundary = number / 2;//divider is always smaller than number/2
+            var boundary = (int)Math.Sqrt(number);//math shit here
 
             for (int i = 3; i <= boundary; i += 2)
                 if (number % i == 0)
