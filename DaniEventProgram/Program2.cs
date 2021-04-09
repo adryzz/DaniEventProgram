@@ -16,7 +16,7 @@ namespace DaniEventProgram
             while (true)
             {
                 string input = Console.ReadLine();
-                if (input.Equals("exit"))
+                if (!char.IsDigit(input[0]))
                 {
                     break;
                 }
