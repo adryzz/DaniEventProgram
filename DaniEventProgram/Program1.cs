@@ -35,7 +35,7 @@ namespace DaniEventProgram
             int result = 0;
             for (int i = 0; i < digits.Length; i++)
             {
-                result += digits[i] * digits[i] * digits[i];//Math.Pow is slow as fuck
+                result += Pow(digits[i], digits.Length);
             }
             return number == result;
         }
@@ -59,6 +59,27 @@ namespace DaniEventProgram
             }
             listOfInts.Reverse();//reverse the list
             return listOfInts.ToArray();
+        }
+
+        /// <summary>
+        /// Elevates a number to a power
+        /// </summary>
+        /// <param name="num">The input number</param>
+        /// <param name="exp">The power</param>
+        /// <returns>The output duh</returns>
+        public static int Pow(int num, int exp)
+        {
+            int result = 1;
+            while (exp > 0)
+            {
+                if ((exp & 1) != 0)
+                {
+                    result *= num;
+                }
+                exp >>= 1;
+                num *= num;
+            }
+            return result;
         }
     }
 }
