@@ -68,7 +68,8 @@ namespace DaniEventProgram
         }
 
         /// <summary>
-        /// Returns the number of digits a number is composed of
+        /// Returns the number of digits a number is composed of.
+        /// It's super fast, almost like log() but on steroids
         /// </summary>
         /// <param name="num">The input number</param>
         /// <returns></returns>
