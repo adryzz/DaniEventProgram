@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30717.126
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DaniEventProgram", "DaniEventProgram\DaniEventProgram.csproj", "{AA6DB061-7D68-4B3D-A50B-815157F3FEBF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AA6DB061-7D68-4B3D-A50B-815157F3FEBF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AA6DB061-7D68-4B3D-A50B-815157F3FEBF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AA6DB061-7D68-4B3D-A50B-815157F3FEBF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AA6DB061-7D68-4B3D-A50B-815157F3FEBF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C4C6DF27-3DCB-45F3-8120-D6AAC561376D}
+	EndGlobalSection
+EndGlobal
