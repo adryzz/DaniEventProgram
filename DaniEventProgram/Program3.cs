@@ -24,13 +24,18 @@ namespace DaniEventProgram
             }
         }
 
+        /// <summary>
+        /// Checks if a number is prime
+        /// </summary>
+        /// <param name="number">The input number</param>
+        /// <returns>Wheter or not the input number is prime</returns>
         public static bool IsPrime(int number)
         {
             if (number <= 1) return false;
             if (number == 2) return true;
             if (number % 2 == 0) return false;
 
-            var boundary = (int)Math.Sqrt(number);
+            var boundary = (int)Math.Sqrt(number);//math shit here
 
             for (int i = 3; i <= boundary; i += 2)
                 if (number % i == 0)

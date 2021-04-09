@@ -25,6 +25,12 @@ namespace DaniEventProgram
             }
         }
 
+        /// <summary>
+        /// Elevates a number to a power
+        /// </summary>
+        /// <param name="num">The input number</param>
+        /// <param name="exp">The power</param>
+        /// <returns>The output duh</returns>
         public static int Pow(int num, int exp)
         {
             int result = 1;
