@@ -3,7 +3,7 @@
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>net5.0</TargetFramework>
-    <StartupObject>DaniEventProgram.Benchmarks.MyProgram</StartupObject>
+    <StartupObject>DaniEventProgram.Program1</StartupObject>
   </PropertyGroup>
 
   <ItemGroup>

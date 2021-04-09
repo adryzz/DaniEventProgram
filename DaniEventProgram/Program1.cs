@@ -30,35 +30,20 @@ namespace DaniEventProgram
         /// <returns>Wheter or not a number is narcisistic</returns>
         public static bool IsNarcisistic(int number)
         {
-            int[] digits = GetDigits(number);
+            // count the number of digits
+            int l = GetDigit(number);
+            int dup = number;
+            int sum = 0;
 
-            int result = 0;
-            for (int i = 0; i < digits.Length; i++)
+            // calculates the sum of
+            //digits raised to power
+            while (dup > 0)
             {
-                result += Pow(digits[i], digits.Length);
+                sum += Pow(dup % 10, l);
+                dup /= 10;
             }
-            return number == result;
-        }
 
-        /// <summary>
-        /// Returns all the decimal digits that a number is composed of
-        /// </summary>
-        /// <param name="num">The input number</param>
-        /// <returns>The digits the input number is </returns>
-        static int[] GetDigits(int num)
-        {
-            if (num == 0)//if the number is 0, return an array with only 0
-            {
-                return new int[] { 0 };
-            }
-            List<int> listOfInts = new List<int>();
-            while (num > 0)//if the number has more digits remaining
-            {
-                listOfInts.Add(num % 10);//divide by 10 and get the remainder
-                num = num / 10;
-            }
-            listOfInts.Reverse();//reverse the list
-            return listOfInts.ToArray();
+            return (number == sum);
         }
 
         /// <summary>
@@ -80,6 +65,67 @@ namespace DaniEventProgram
                 num *= num;
             }
             return result;
+        }
+
+        /// <summary>
+        /// Returns the number of digits a number is composed of
+        /// </summary>
+        /// <param name="num">The input number</param>
+        /// <returns></returns>
+        static int GetDigit(int n)
+        {
+            if (n < 100000)
+            {
+                // 5 or less
+                if (n < 100)
+                {
+                    // 1 or 2
+                    if (n < 10)
+                        return 1;
+                    else
+                        return 2;
+                }
+                else
+                {
+                    // 3 or 4 or 5
+                    if (n < 1000)
+                        return 3;
+                    else
+                    {
+                        // 4 or 5
+                        if (n < 10000)
+                            return 4;
+                        else
+                            return 5;
+                    }
+                }
+            }
+            else
+            {
+                // 6 or more
+                if (n < 10000000)
+                {
+                    // 6 or 7
+                    if (n < 1000000)
+                        return 6;
+                    else
+                        return 7;
+                }
+                else
+                {
+                    // 8 to 10
+                    if (n < 100000000)
+                        return 8;
+                    else
+                    {
+                        // 9 or 10
+                        if (n < 1000000000)
+                            return 9;
+                        else
+                            return 10;
+                    }
+                }
+            }
         }
     }
 }
