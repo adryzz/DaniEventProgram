@@ -48,7 +48,7 @@ namespace DaniEventProgram
         {
             List<int> primes = new List<int>();
             int number = v;
-            for(int div = 2; div <= Math.Sqrt(v)+2; div++)//since the square root of the number is always bigger than number / 2
+            for(int div = 2; (div*div) <= v+16; div++)
             {
                 //if the remainder of the division of the number and our divider is 0, it's divisible by it.
                 //and so, since the div number starts at 0 and goes up, we can ensure that it is prime
