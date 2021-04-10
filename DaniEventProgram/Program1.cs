@@ -31,15 +31,14 @@ namespace DaniEventProgram
         public static bool IsNarcisistic(int number)
         {
             // count the number of digits
-            int l = GetDigit(number);
+            int len = GetDigit(number);
             int dup = number;
             int sum = 0;
 
-            // calculates the sum of
-            //digits raised to power
+            //do math nerd shit here (definition of narcisistic number)
             while (dup > 0)
             {
-                sum += Pow(dup % 10, l);
+                sum += Pow(dup % 10, len);
                 dup /= 10;
             }
 
@@ -49,22 +48,22 @@ namespace DaniEventProgram
         /// <summary>
         /// Elevates a number to a power
         /// </summary>
-        /// <param name="num">The input number</param>
-        /// <param name="exp">The power</param>
+        /// <param name="a">The input number</param>
+        /// <param name="b">The power</param>
         /// <returns>The output duh</returns>
-        public static int Pow(int num, int exp)
+        public static int Pow(int a, int b)
         {
-            int result = 1;
-            while (exp > 0)
+            int re = 1;
+            while (b > 0)
             {
-                if ((exp & 1) != 0)
+                if ((b & 1) == 1)
                 {
-                    result *= num;
+                    re *= a;
                 }
-                exp >>= 1;
-                num *= num;
+                b >>= 1;
+                a *= a;
             }
-            return result;
+            return re;
         }
 
         /// <summary>
