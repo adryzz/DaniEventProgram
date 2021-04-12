@@ -20,7 +20,7 @@ namespace DaniEventProgram
                 {
                     break;
                 }
-                Console.WriteLine(IsPrime(int.Parse(input)));
+                Console.WriteLine(IsPrime(long.Parse(input)));
             }
         }
 
@@ -29,13 +29,13 @@ namespace DaniEventProgram
         /// </summary>
         /// <param name="number">The input number</param>
         /// <returns>Wheter or not the input number is prime</returns>
-        public static bool IsPrime(int number)
+        public static bool IsPrime(long number)
         {
             if (number <= 1) return false;
             if (number == 2) return true;
             if (number % 2 == 0) return false;
 
-            for (int i = 3; i*i <= number; i += 2)
+            for (long i = 3; i*i <= number; i += 2)
                 if (number % i == 0)
                     return false;
 

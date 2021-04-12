@@ -20,19 +20,19 @@ namespace DaniEventProgram
                 {
                     break;
                 }
-                Console.WriteLine(GetString(GetPrimes(int.Parse(input))));
+                Console.WriteLine(GetString(GetPrimes(long.Parse(input))));
             }
         }
 
         /// <summary>
-        /// Formats an int array to be printed
+        /// Formats an long array to be prlonged
         /// </summary>
-        /// <param name="nums">The int array</param>
+        /// <param name="nums">The long array</param>
         /// <returns></returns>
-        public static string GetString(int[] nums)
+        public static string GetString(long[] nums)
         {
             string result = "";
-            for(int i = 0; i < nums.Length; i++)
+            for(long i = 0; i < nums.Length; i++)
             {
                 result += nums[i] + " ";
             }
@@ -44,11 +44,11 @@ namespace DaniEventProgram
         /// </summary>
         /// <param name="v">The given input number</param>
         /// <returns></returns>
-        public static int[] GetPrimes(int v)
+        public static long[] GetPrimes(long v)
         {
-            List<int> primes = new List<int>();
-            int number = v;
-            for(int div = 2; (div*div) <= v+16; div++)
+            List<long> primes = new List<long>();
+            long number = v;
+            for(long div = 2; (div*div) <= v+div; div++)
             {
                 //if the remainder of the division of the number and our divider is 0, it's divisible by it.
                 //and so, since the div number starts at 0 and goes up, we can ensure that it is prime

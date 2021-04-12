@@ -20,7 +20,7 @@ namespace DaniEventProgram
                 {
                     break;
                 }
-                Console.WriteLine(IsNarcisistic(int.Parse(input)));
+                Console.WriteLine(IsNarcisistic(long.Parse(input)));
             }
         }
         /// <summary>
@@ -28,12 +28,12 @@ namespace DaniEventProgram
         /// </summary>
         /// <param name="number">The input number</param>
         /// <returns>Wheter or not a number is narcisistic</returns>
-        public static bool IsNarcisistic(int number)
+        public static bool IsNarcisistic(long number)
         {
             // count the number of digits
-            int len = GetDigit(number);
-            int dup = number;
-            int sum = 0;
+            long len = GetDigit(number);
+            long dup = number;
+            long sum = 0;
 
             //do math nerd shit here (definition of narcisistic number)
             while (dup > 0)
@@ -51,9 +51,9 @@ namespace DaniEventProgram
         /// <param name="a">The input number</param>
         /// <param name="b">The power</param>
         /// <returns>The output duh</returns>
-        public static int Pow(int a, int b)
+        public static long Pow(long a, long b)
         {
-            int re = 1;
+            long re = 1;
             while (b > 0)
             {
                 if ((b & 1) == 1)
@@ -72,7 +72,7 @@ namespace DaniEventProgram
         /// </summary>
         /// <param name="num">The input number</param>
         /// <returns></returns>
-        static int GetDigit(int n)
+        static long GetDigit(long n)
         {
             if (n < 100000)
             {

@@ -14,27 +14,15 @@ namespace DaniEventProgram.Benchmarks
         Random random = new Random();
 
         [Benchmark]
-        public void Task1()
-        {
-            Program1.IsNarcisistic(random.Next());
-        }
-
-        [Benchmark]
-        public void Task2()
-        {
-            Program2.GetPrimes(random.Next());
-        }
-
-        [Benchmark]
-        public void Task3()
-        {
-            Program3.IsPrime(random.Next());
-        }
-
-        [Benchmark]
         public void Task4()
         {
-            Program4.Pow(random.Next(), random.Next(0, 10));
+            Program4.Pow(100000, 50);
+        }
+
+        [Benchmark]
+        public void Task5()
+        {
+            SingleThreadedPow.Pow(100000, 50);
         }
     }
 

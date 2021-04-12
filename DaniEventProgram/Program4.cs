@@ -21,7 +21,7 @@ namespace DaniEventProgram
                     break;
                 }
                 string input2 = Console.ReadLine();
-                Console.WriteLine(Pow(int.Parse(input1), int.Parse(input2)));
+                Console.WriteLine(Pow(long.Parse(input1), long.Parse(input2)));
             }
         }
 
@@ -31,9 +31,9 @@ namespace DaniEventProgram
         /// <param name="a">The input number</param>
         /// <param name="b">The power</param>
         /// <returns>The output duh</returns>
-        public static int Pow(int a, int b)
+        public static long Pow(long a, long b)
         {
-            int re = 1;
+            long re = 1;
             while (b > 0)
             {
                 if ((b & 1) == 1)
